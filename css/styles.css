@@ -508,7 +508,11 @@ img {
 .footer .container {
   display: flex;
   align-items: baseline;
-  gap: 70px;
+
+}
+
+.container-footer {
+  margin-right: 70px;
 }
 
 .socials-text {
@@ -526,6 +530,7 @@ img {
   display: flex;
   gap: 10px;
   justify-content: center;
+  margin-right: 93px;
 }
 
 .socials-footer-link {
@@ -556,6 +561,9 @@ img {
   |============================
 */
 
+.footer-mail {
+  margin: 0 auto;}
+
 .register-form-footer-title {
   display: flex;
   margin-bottom: 20px;
@@ -567,10 +575,11 @@ img {
   color: var(--primery-white-color);
 }
 
+
 .register-form-footer-input {
   width: 358px;
   height: 50px;
-  padding: 16px 16px;
+  padding: 15px 16px;
   margin-right: 12px;
   outline: transparent;
   font-weight: 400;
@@ -581,6 +590,11 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--grey-bg-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form-footer-input:focus {
+  border-color: var(--accent-text-color);
 }
 
 .register-form-footer-btn {
@@ -617,12 +631,12 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 .modal {
   position: absolute;
@@ -786,6 +800,11 @@ img {
   | Register form
   |============================
 */
+
+.register-form-group {
+  margin-bottom: 20px;
+}
+
 .register-form-titel {
   display: block;
   text-align: center;
@@ -798,14 +817,12 @@ img {
   color: var(--secondary-text-color);
 }
 
-.register-form-group {
-  margin-bottom: 20px;
-}
+
 
 .register-form-field {
   position: relative;
   display: block;
-  margin-bottom: 4px;
+ 
 }
 
 .register-form-label {
@@ -813,6 +830,7 @@ img {
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
+  margin-bottom: 4px;
 }
 
 .register-form-input {
@@ -823,6 +841,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .register-form-input:focus {
@@ -855,6 +874,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .register-form-message:focus {
@@ -879,6 +899,10 @@ img {
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* .register-form-checkbox:focus .icon-unchecked {
+  fill: var(--accent-text-color);
+} */
 
 .register-form-checkbox:checked + .register-form-icons .icon-checked {
   opacity: 1;
